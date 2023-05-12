@@ -21,6 +21,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -125,19 +126,23 @@
         font-weight: 100;
       }
 
-      #section-1 p,
-      #section-2 p,
+      #nature p,
+      #visit p,
       #section-3 p,
-      #section-4 p {
+      #hike p {
         margin: 8rem 3rem;
       }
-      #section-1 img,
-      #section-2 img,
+      #nature img,
+      #visit img,
       #section-3 img,
-      #section-4 img {
+      #hike img {
         object-fit: cover;
         width: 100%;
         height: 400px;
+      }
+      #weather {
+        color: yellow;
+        font-weight: bold;
       }
 
       @media (max-width: 1000px) {
@@ -164,7 +169,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#visit">Visit</a></li>
             <li><a href="#nature">Nature</a></li>
-            <li><a href="#hikes">Hikes</a></li>
+            <li><a href="#hike">Hikes</a></li>
           </ul>
         </nav>
 
@@ -178,12 +183,14 @@
           <h1>Iceland</h1>
           <h3>Explore.</h3>
         </div>
-        <div class="row main-p">
+        <div class="row main-p d-flex">
           <div class="col-md-6">
             <p>Learn more about Iceland</p>
           </div>
-          <div class="col-md-6">
-            <p id="temp">Curr. Temp °C</p>
+          <div class="col-md-6" id="weather">
+            <!-- <span id="icon">PLACEHOLDER</span> -->
+            <span id="temp">PLACEHOLDER</span>
+            <span>in Reykjavík</span>
           </div>
         </div>
       </div>
@@ -191,7 +198,7 @@
 
     <div class="container">
       <section>
-        <div class="row" id="section-1">
+        <div class="row" id="nature">
           <div class="col-md-6 d-md-inline-flex">
             <p>
               <strong>Almost 80% of Iceland is uninhabited,</strong>
@@ -209,7 +216,7 @@
         </div>
       </section>
       <section>
-        <div class="row" id="section-2">
+        <div class="row" id="visit">
           <div class="col-md-6 d-md-inline-flex">
             <img
               src="travel-iceland-photos/puffin.jpg"
@@ -242,7 +249,7 @@
         </div>
       </section>
       <section>
-        <div class="row" id="section-4">
+        <div class="row" id="hike">
           <div class="col-md-6">
             <img
               src="travel-iceland-photos/hike.jpg"
@@ -270,6 +277,23 @@
     </footer>
   </body>
   <script>
-    /*Add script for current weather - maybe add a weather icon for current weather?
+    function displayTemperature(response) {
+      let temperature = Math.round(response.data.main.temp);
+      document.querySelector("#temp").innerHTML = `${temperature}°C`;
+      //   let icon = icon.setAttribute(
+      //     "src",
+      //     `https://api.openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
+      //   );
+      //   document.querySelector("#icon").innerHTML = `${icon}`;
+    }
+
+    function getTemperature(coordinates) {
+      let key = "acf4f9701d8363a6ed361252f2b74e65";
+      let city = "Reykjavik";
+      let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+
+      axios.get(api).then(displayTemperature);
+    }
+    getTemperature();
   </script>
 </html>
