@@ -30,9 +30,9 @@
       :root {
         --headings-font-family: "Inter", sans-serif;
         --p-font-family: Georgia, "Times New Roman", Times, serif;
-        --main-color: pink;
-        --secondary-color: green;
-        --accent-color: blue;
+        --primary-color: #013a4d;
+        --secondary-color: #7e8294;
+        --accent-color: #037992;
       }
       /* figure out header wihtout using absolute positioning */
       nav ul {
@@ -47,17 +47,20 @@
       }
       li {
         display: inline-block;
+        letter-spacing: 0.25rem;
       }
       nav li a {
-        color: var(--main-color);
+        color: var(--primary-color);
         text-decoration: none;
       }
-      nav li:visited {
+      a:visited {
         color: var(--accent-color);
       }
       nav li:hover {
         color: var(--secondary-color);
         transition: ease-in-out 200ms;
+        transform: skew(-5deg);
+        letter-spacing: 0.5rem;
       }
       main img {
         width: 100%;
@@ -66,9 +69,19 @@
       h1 {
         font-size: 10rem;
         text-transform: uppercase;
+        color: var(--primary-color);
       }
-      h3 {
-        font-size: 3rem;
+      h6 {
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+        letter-spacing: 0.25rem;
+      }
+      section p {
+        color: var(--primary-color);
+        background-color: #cacddc;
+        padding: 3rem;
+        border-radius: 2rem 8rem 22rem 6rem;
+        letter-spacing: 0.08rem;
       }
       section {
         display: inline-flex;
@@ -88,7 +101,7 @@
         margin: 2rem 1.5rem;
         text-align: right;
         font-size: 0.65rem;
-        color: var(--accent-color);
+        color: var(--secondary-color);
         letter-spacing: 0.05rem;
       }
       footer a {
@@ -102,7 +115,7 @@
         text-decoration: none;
       }
       footer .coder-social:hover {
-        color: var(--accent-color);
+        color: var(--secondary-color);
       }
       footer i {
         font-size: 1.5rem;
@@ -120,12 +133,27 @@
         font-weight: 200 !important;
       }
       .main-p {
-        position: absolute;
         left: 3%;
-        bottom: 3%;
-        font-weight: 100;
       }
-
+      .main-p,
+      #weather {
+        position: absolute;
+        letter-spacing: 0.15rem;
+        color: #fff;
+        font-weight: 100;
+        font-size: 1rem;
+        bottom: 3%;
+      }
+      #weather {
+        text-align: right;
+        right: 3%;
+      }
+      .trails {
+        text-align: center;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        letter-spacing: 0.08rem;
+      }
       #nature p,
       #visit p,
       #section-3 p,
@@ -134,26 +162,30 @@
       }
       #nature img,
       #visit img,
-      #section-3 img,
-      #hike img {
+      #section-3 img {
         object-fit: cover;
         width: 100%;
-        height: 400px;
+        height: 450px;
+        border-radius: 100px;
       }
-      #weather {
-        color: yellow;
-        font-weight: bold;
+      #hike img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+      }
+
+      .hike-title {
+        text-align: center;
+        padding: 2rem;
       }
 
       @media (max-width: 1000px) {
         h1 {
           font-size: 5rem;
         }
-        h3 {
-          font-size: 1rem;
-        }
-        .main-p {
-          font-size: 0.75rem;
+        .main-p,
+        #weather {
+          font-size: 0.65rem;
         }
         nav ul {
           left: 25%;
@@ -181,16 +213,14 @@
         />
         <div class="main-title">
           <h1>Iceland</h1>
-          <h3>Explore.</h3>
         </div>
-        <div class="row main-p d-flex">
-          <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-9 main-p">
             <p>Learn more about Iceland</p>
           </div>
-          <div class="col-md-6" id="weather">
-            <!-- <span id="icon">PLACEHOLDER</span> -->
-            <span id="temp">PLACEHOLDER</span>
-            <span>in Reykjavík</span>
+          <div class="col-md-3" id="weather">
+            <span id="temp"></span>
+            <span>°<sup>c</sup> Reykjavík</span>
           </div>
         </div>
       </div>
@@ -233,11 +263,11 @@
         <div class="row" id="section-3">
           <div class="col-md-6 d-md-inline-flex">
             <p>Population is 372,520*</p>
-            <!-- <div class="row">
+            <div class="row">
               <div class="col-md">
-                <small>*as of 2021</small>
+                <sub>*as of 2021</sub>
               </div>
-            </div> -->
+            </div>
           </div>
           <div class="col-md-6 d-md-inline-flex">
             <img
@@ -248,20 +278,29 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="row" id="hike">
-          <div class="col-md-6">
-            <img
-              src="travel-iceland-photos/hike.jpg"
-              alt="hiker on trail"
-              class="img-fluid"
-            />
-          </div>
-          <div class="col-md-6">BEST RATED HIKES</div>
-        </div>
-      </section>
     </div>
-
+    <section>
+      <div class="row">
+        <div class="col-md" id="hike">
+          <img
+            src="travel-iceland-photos/hike1.jpg"
+            alt="hiker on trail"
+            class="img-fluid"
+          />
+          <h6 class="hike-title">Best Rated Hikes</h6>
+          <div class="row trails">
+            <div class="col-md-4">Landmannalaugar</div>
+            <div class="col-md-4">Fjaðrárgljúfur</div>
+            <div class="col-md-4">Fimmvörðuháls</div>
+          </div>
+          <div class="row trails">
+            <div class="col-md-4">Snæfellsjökull</div>
+            <div class="col-md-4">Skaftafell National Park</div>
+            <div class="col-md-4">Kerlingarfjöll</div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div>
         <a href="https://www.linkedin.com/in/doyonlaura" target="_blank"
@@ -279,7 +318,7 @@
   <script>
     function displayTemperature(response) {
       let temperature = Math.round(response.data.main.temp);
-      document.querySelector("#temp").innerHTML = `${temperature}°C`;
+      document.querySelector("#temp").innerHTML = `${temperature}`;
       //   let icon = icon.setAttribute(
       //     "src",
       //     `https://api.openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
