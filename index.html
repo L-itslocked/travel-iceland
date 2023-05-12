@@ -1,51 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visit Iceland</title>
     <style>
       :root {
-        --headings-font-family: ;
+        --headings-font-family: "Inter", sans-serif;
         --p-font-family: Georgia, "Times New Roman", Times, serif;
-        --main-color: ;
+        --main-color: pink;
         --secondary-color: ;
         --accent-color: ;
       }
-      ul {
+      nav ul {
+        position: absolute;
+        top: 1%;
+        left: 40%;
         list-style: none;
-        margin: 0 auto;
         text-align: center;
         word-spacing: 2rem;
-        font-family: var(--p-font-family);
         color: var(--main-color);
+        text-transform: lowercase;
+        font-size: 0.75rem;
       }
       li {
         display: inline-block;
       }
-      li a {
+      nav li a {
         text-decoration: none;
       }
-      li:visited {
+      nav li:visited {
         color: var(--accent-color);
       }
-      li:hover {
+      nav li:hover {
         color: var(--secondary-color);
         text-decoration: underline;
+      }
+      main img {
+        width: 100%;
+        height: auto;
+      }
+      h1 {
+        font-size: 10rem;
+        text-transform: uppercase;
+      }
+      h3 {
+        font-size: 3rem;
+      }
+      .main-container {
+        position: relative;
+        font-family: var(--headings-font-family);
+      }
+      .main-title {
+        position: absolute;
+        top: 25%;
+        left: 3%;
+        line-height: 0.5rem;
+        font-weight: 200;
       }
     </style>
   </head>
   <body>
     <main>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#visit">Visit</a></li>
-          <li><a href="#nature">Nature</a></li>
-          <li><a href="#hikes">Hikes</a></li>
-        </ul>
-      </nav>
+      <div class="main-container">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#visit">Visit</a></li>
+            <li><a href="#nature">Nature</a></li>
+            <li><a href="#hikes">Hikes</a></li>
+          </ul>
+        </nav>
+
+        <img
+          src="travel-iceland-photos/header.jpg"
+          class="img-fluid"
+          id="main-img"
+          alt="Iceland snowcaps and icebergs"
+        />
+        <div class="main-title">
+          <h1>Iceland</h1>
+          <h3>Explore.</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Learn more about Iceland</p>
+          </div>
+          <div class="col-md-6">
+            <p id="temp">Curr. Temp °C</p>
+          </div>
+        </div>
+      </div>
     </main>
     <section></section>
     <section></section>
