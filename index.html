@@ -185,7 +185,7 @@
 
       @media (max-width: 1000px) {
         h1 {
-          font-size: 5rem;
+          font-size: 7rem;
         }
         .main-p,
         #weather {
@@ -193,6 +193,23 @@
         }
         nav ul {
           left: 25%;
+        }
+      }
+      @media (max-width: 800px) {
+        h1 {
+          font-size: 5rem;
+        }
+        #nature img {
+          margin-bottom: 100px;
+        }
+        /* #population p {
+          visibility: hidden;
+        } */
+        section {
+          margin: 5px auto;
+        }
+        p {
+          font-size: 0.65rem;
         }
       }
     </style>
@@ -292,6 +309,7 @@
           <div class="col-md-6 d-md-inline-flex">
             <p><strong>Population is 372,520</strong>*</p>
             <!-- <div>*as of 2021</div> -->
+            <!--add a hover element with population count and add another photo with fact?-->
           </div>
           <div class="col-md-6 d-md-inline-flex">
             <img
