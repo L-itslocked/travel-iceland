@@ -5,18 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visit Iceland</title>
-    <style></style>
+    <style>
+      :root {
+        --headings-font-family: ;
+        --p-font-family: Georgia, "Times New Roman", Times, serif;
+        --main-color: ;
+        --secondary-color: ;
+        --accent-color: ;
+      }
+      ul {
+        list-style: none;
+        margin: 0 auto;
+        text-align: center;
+        word-spacing: 2rem;
+        font-family: var(--p-font-family);
+        color: var(--main-color);
+      }
+      li {
+        display: inline-block;
+      }
+      li a {
+        text-decoration: none;
+      }
+      li:visited {
+        color: var(--accent-color);
+      }
+      li:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
     <main>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#visit">Visit</li>
-                <li><a href="#nature">Nature</li>
-                <li><a href="#hikes">Hikes</li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#visit">Visit</a></li>
+          <li><a href="#nature">Nature</a></li>
+          <li><a href="#hikes">Hikes</a></li>
+        </ul>
+      </nav>
     </main>
     <section></section>
     <section></section>
