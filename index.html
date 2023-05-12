@@ -33,6 +33,7 @@
         --secondary-color: green;
         --accent-color: blue;
       }
+      /* figure out header wihtout using absolute positioning */
       nav ul {
         position: absolute;
         top: 1%;
@@ -73,14 +74,15 @@
         word-wrap: normal;
         padding-top: 2rem;
       }
-      /* footer i {
+
+      footer i {
         color: var(--heading-color);
         padding-right: 0.5rem;
       }
       footer i:hover {
-        transform: rotateX("300");
-        animation: 2s linear;
-      } */
+        transform: rotate(360deg);
+        transition: 3s;
+      }
       footer {
         margin: 2rem 1.5rem;
         text-align: right;
@@ -255,15 +257,19 @@
 
     <footer>
       <div>
-        <a href="https://www.linkedin.com/in/doyonlaura"
+        <a href="https://www.linkedin.com/in/doyonlaura" target="_blank"
           ><i class="fa-brands fa-linkedin coder-social"></i
         ></a>
-        <a href="https://github.com/L-itslocked"
+        <a href="https://github.com/L-itslocked" target="_blank"
           ><i class="fa-brands fa-github coder-social"></i
         ></a>
       </div>
-      Open-source code available on <a href="">Github</a> by Laura Doyon
+      Open-source code available on
+      <a href="https://github.com/L-itslocked/travel-iceland">Github</a> by
+      Laura Doyon
     </footer>
   </body>
-  <script></script>
+  <script>
+    /*Add script for current weather - maybe add a weather icon for current weather?
+  </script>
 </html>
