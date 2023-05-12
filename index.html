@@ -81,6 +81,28 @@
         bottom: 3%;
         font-weight: 100;
       }
+
+      section {
+        display: inline-flex;
+        word-wrap: normal;
+        padding-top: 2rem;
+      }
+
+      #section-1 p,
+      #section-2 p,
+      #section-3 p,
+      #section-4 p {
+        margin: 8rem 3rem;
+      }
+      #section-1 img,
+      #section-2 img,
+      #section-3 img,
+      #section-4 img {
+        object-fit: cover;
+        width: 375px;
+        height: 375px;
+      }
+
       @media (max-width: 1000px) {
         h1 {
           font-size: 5rem;
@@ -98,44 +120,104 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <main>
-        <div class="main-container">
-          <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#visit">Visit</a></li>
-              <li><a href="#nature">Nature</a></li>
-              <li><a href="#hikes">Hikes</a></li>
-            </ul>
-          </nav>
+    <main>
+      <div class="main-container">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#visit">Visit</a></li>
+            <li><a href="#nature">Nature</a></li>
+            <li><a href="#hikes">Hikes</a></li>
+          </ul>
+        </nav>
 
-          <img
-            src="travel-iceland-photos/header.jpg"
-            class="img-fluid"
-            id="main-img"
-            alt="Iceland snowcaps and icebergs"
-          />
-          <div class="main-title">
-            <h1>Iceland</h1>
-            <h3>Explore.</h3>
+        <img
+          src="travel-iceland-photos/header.jpg"
+          class="img-fluid"
+          id="main-img"
+          alt="Iceland snowcaps and icebergs"
+        />
+        <div class="main-title">
+          <h1>Iceland</h1>
+          <h3>Explore.</h3>
+        </div>
+        <div class="row main-p">
+          <div class="col-md-6">
+            <p>Learn more about Iceland</p>
           </div>
-          <div class="row main-p">
-            <div class="col-md-6">
-              <p>Learn more about Iceland</p>
-            </div>
-            <div class="col-md-6">
-              <p id="temp">Curr. Temp °C</p>
-            </div>
+          <div class="col-md-6">
+            <p id="temp">Curr. Temp °C</p>
           </div>
         </div>
-      </main>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <footer></footer>
+      </div>
+    </main>
+
+    <div class="container">
+      <section>
+        <div class="row" id="section-1">
+          <div class="col-md-6 d-md-inline-flex">
+            <p>
+              <strong>Almost 80% of Iceland is uninhabited,</strong>
+              and the terrain consists of plateaux, mountain peaks, and fertile
+              lowlands
+            </p>
+          </div>
+          <div class="col-md-6 d-md-inline-flex">
+            <img
+              src="travel-iceland-photos/iceberg.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="row" id="section-2">
+          <div class="col-md-6 d-md-inline-flex">
+            <img
+              src="travel-iceland-photos/puffin.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6 d-md-inline-flex">
+            <p>Iceland has 266 museums in total</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="row" id="section-3">
+          <div class="col-md-6 d-md-inline-flex">
+            <p>Population is 372,520*</p>
+            <!-- <div class="row">
+              <div class="col-md">
+                <small>*as of 2021</small>
+              </div>
+            </div> -->
+          </div>
+          <div class="col-md-6 d-md-inline-flex">
+            <img
+              src="travel-iceland-photos/population.jpg"
+              alt="town in Iceland"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="row" id="section-4">
+          <div class="col-md-6">
+            <img
+              src="travel-iceland-photos/hike.jpg"
+              alt="hiker on trail"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6">BEST RATED HIKES</div>
+        </div>
+      </section>
     </div>
+    <footer></footer>
   </body>
   <script></script>
 </html>
