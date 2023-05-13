@@ -88,7 +88,6 @@
         word-wrap: normal;
         padding-top: 2rem;
       }
-
       footer i {
         color: var(--heading-color);
         padding-right: 0.5rem;
@@ -135,6 +134,27 @@
       .main-p {
         left: 3%;
       }
+
+      .trails {
+        text-align: center;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        letter-spacing: 0.08rem;
+      }
+      .divider-icon {
+        visibility: hidden;
+        display: block;
+        text-align: center;
+        margin: 2.2rem 1rem 0rem 1rem;
+      }
+      .arrow {
+        display: block;
+        text-align: right;
+        padding: 0 2rem;
+      }
+      .fa-arrow-up {
+        color: var(--primary-color);
+      }
       .main-p,
       #weather {
         position: absolute;
@@ -148,12 +168,6 @@
         text-align: right;
         right: 3%;
       }
-      .trails {
-        text-align: center;
-        font-size: 1.1rem;
-        color: var(--primary-color);
-        letter-spacing: 0.08rem;
-      }
 
       #nature p,
       #population p,
@@ -161,7 +175,7 @@
         margin: 8rem 3rem;
       }
       #population {
-        margin-top: -10rem;
+        margin-top: -5rem;
       }
       #nature img,
       #visit img,
@@ -171,12 +185,19 @@
         height: 450px;
         border-radius: 100px;
       }
+
       #hike img {
         width: 100%;
         height: 50%;
         object-fit: cover;
-        margin-top: 5rem;
+        margin-top: 5rem 0;
       }
+      /* #hike img:hover {
+        transform: scale(1.25);
+        height: 20%;
+        margin: 3rem;
+        transition: ease-in-out 2s;
+      } */
 
       .hike-title {
         text-align: center;
@@ -194,22 +215,41 @@
         nav ul {
           left: 25%;
         }
+        #hike,
+        #nature,
+        #visit {
+          margin: -1rem auto;
+        }
+        #visit p,
+        #nature p {
+          margin: 1rem auto;
+        }
       }
       @media (max-width: 800px) {
         h1 {
           font-size: 5rem;
         }
-        #nature img {
-          margin-bottom: 100px;
-        }
-        /* #population p {
-          visibility: hidden;
-        } */
         section {
           margin: 5px auto;
         }
         p {
           font-size: 0.65rem;
+        }
+        .divider-icon {
+          visibility: visible;
+        }
+        #population img,
+        #nature img,
+        #visit img {
+          padding: 1.5rem;
+        }
+        #population img {
+          margin: 3rem 0 -0.75rem;
+        }
+        #nature p,
+        #population p,
+        #visit p {
+          margin: 1.5rem;
         }
       }
     </style>
@@ -266,6 +306,9 @@
           </div>
         </div>
       </section>
+      <div class="divider-icon">
+        <i class="fa-solid fa-mountain"></i>
+      </div>
       <section>
         <div class="row" id="visit">
           <div class="col-md-6 d-md-inline-flex">
@@ -303,14 +346,12 @@
         </div>
       </div>
     </section>
+    <!-- <div class="divider-icon">
+      <i class="fa-solid fa-mountain"></i>
+    </div> -->
     <div class="container">
       <section>
         <div class="row" id="population">
-          <div class="col-md-6 d-md-inline-flex">
-            <p><strong>Population is 372,520</strong>*</p>
-            <!-- <div>*as of 2021</div> -->
-            <!--add a hover element with population count and add another photo with fact?-->
-          </div>
           <div class="col-md-6 d-md-inline-flex">
             <img
               src="travel-iceland-photos/population.jpg"
@@ -318,16 +359,24 @@
               class="img-fluid"
             />
           </div>
+          <div class="col-md-6 d-md-inline-flex">
+            <p><strong>Population is 372,520</strong>*</p>
+            <!-- <div>*as of 2021</div> -->
+            <!--add a hover element with population count and add another photo with fact?-->
+          </div>
         </div>
       </section>
+      <div class="arrow">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i> </a>
+      </div>
     </div>
     <footer>
       <div>
         <a href="https://www.linkedin.com/in/doyonlaura" target="_blank"
-          ><i class="fa-brands fa-linkedin coder-social"></i
+          ><i class="fa-brands fa-linkedin"></i
         ></a>
         <a href="https://github.com/L-itslocked" target="_blank"
-          ><i class="fa-brands fa-github coder-social"></i
+          ><i class="fa-brands fa-github"></i
         ></a>
       </div>
       Open-source code available on
