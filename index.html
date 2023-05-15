@@ -140,6 +140,11 @@
         font-size: 1.1rem;
         color: var(--primary-color);
         letter-spacing: 0.08rem;
+        display: flex;
+        justify-content: center;
+      }
+      .trails-bottom {
+        margin-bottom: -20rem;
       }
       .divider-icon {
         visibility: hidden;
@@ -185,12 +190,17 @@
         border-radius: 100px;
       }
 
+      #visit {
+        margin-top: -2rem;
+      }
+
       #hike img {
         width: 100%;
         height: 50%;
         object-fit: cover;
         margin-top: 5rem 0;
       }
+
       /* #hike img:hover {
         transform: scale(1.25);
         height: 20%;
@@ -198,9 +208,30 @@
         transition: ease-in-out 2s;
       } */
 
+      #night img {
+        width: 100%;
+        height: auto;
+        margin-top: 6rem;
+      }
+
       .hike-title {
         text-align: center;
         padding: 2rem;
+      }
+      @media (min-width: 1000px) {
+        .hike-title,
+        .trails {
+          display: flex;
+          justify-content: center;
+          line-height: 2rem;
+        }
+        .hike-title {
+          margin: 3rem 0;
+          font-size: 2rem;
+        }
+        .trails {
+          font-size: 1.25rem;
+        }
       }
 
       @media (max-width: 1000px) {
@@ -224,16 +255,22 @@
           margin: 1rem auto;
         }
       }
-      /* @media (min-width: 767px) {
-        #population p {
+      @media (min-width: 767px) {
+        #hike p {
+          text-align: center;
+          justify-content: center;
+          display: flex;
+        }
+        #population p,
+        #population img {
           visibility: hidden;
         }
-        #population img {
+        /* #population img {
           border-radius: 0;
           width: 100%;
           object-fit:cover;
-        }
-      } */
+        } */
+      }
       @media (max-width: 800px) {
         h1 {
           font-size: 5rem;
@@ -257,6 +294,9 @@
         #visit p {
           margin: 1.5rem;
         }
+        .trails-bottom {
+          margin-bottom: 4rem;
+        }
       }
     </style>
   </head>
@@ -273,7 +313,7 @@
         </nav>
 
         <img
-          src="travel-iceland-photos/header.jpg"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/126/original/header.jpg?1684176421"
           class="img-fluid"
           id="main-img"
           alt="Iceland snowcaps and icebergs"
@@ -305,7 +345,7 @@
           </div>
           <div class="col-md-6 d-md-inline-flex">
             <img
-              src="travel-iceland-photos/puffin.jpg"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/127/original/puffin.jpg?1684176437"
               alt="puffin"
               class="img-fluid"
             />
@@ -319,7 +359,7 @@
         <div class="row" id="visit">
           <div class="col-md-6 d-md-inline-flex">
             <img
-              src="travel-iceland-photos/iceberg.jpg"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/130/original/iceberg.jpg?1684176555"
               alt="inside ice cave"
               class="img-fluid"
             />
@@ -332,9 +372,9 @@
     </div>
     <section>
       <div class="row">
-        <div class="col-md" id="hike">
+        <div class="col-md-12" id="hike">
           <img
-            src="travel-iceland-photos/hike1.jpg"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/128/original/hike1.jpg?1684176479"
             alt="hiker on trail"
             class="img-fluid"
           />
@@ -349,14 +389,30 @@
             <div class="col-md-4">Skaftafell National Park</div>
             <div class="col-md-4">Kerlingarfjöll</div>
           </div>
+          <div class="row trails trails-bottom">
+            <div class="col-md-4">Mount Esja</div>
+            <div class="col-md-4">Glymur Waterfall</div>
+            <div class="col-md-4">Kirkjufell</div>
+          </div>
         </div>
       </div>
     </section>
+    <section>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/129/original/header-dark.jpg?1684176504"
+        alt="Iceland northern lights landscape"
+        class="img-fluid night"
+      />
+    </section>
+    <div class="arrow">
+      <a href="#"><i class="fa-solid fa-arrow-up"></i> </a>
+    </div>
+
     <!-- <div class="divider-icon">
       <i class="fa-solid fa-mountain"></i>
     </div> -->
-    
-      <!-- <section>
+
+    <!-- <section>
         <div class="row" id="population">
           <div class="col-md-6 d-md-inline-flex">
             <img
@@ -368,14 +424,10 @@
           <div class="col-md-6 d-md-inline-flex">
             <p><strong>Population is 372,520</strong>*</p>
             <div>*as of 2021</div> -->
-            <!--add a hover element with population count and add another photo with fact?-->
-          <!-- </div>
+    <!--add a hover element with population count and add another photo with fact?-->
+    <!-- </div>
         </div>
       </section> -->
-      <div class="arrow">
-        <a href="#"><i class="fa-solid fa-arrow-up"></i> </a>
-      </div>
-    
     <footer>
       <div>
         <a href="https://www.linkedin.com/in/doyonlaura" target="_blank"
