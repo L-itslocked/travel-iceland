@@ -174,12 +174,11 @@
       #visit p {
         margin: 8rem 3rem;
       }
-      #population {
+      /* #population {
         margin-top: -5rem;
-      }
+      } */
       #nature img,
-      #visit img,
-      #population img {
+      #visit img {
         object-fit: cover;
         width: 550px;
         height: 450px;
@@ -225,6 +224,16 @@
           margin: 1rem auto;
         }
       }
+      /* @media (min-width: 767px) {
+        #population p {
+          visibility: hidden;
+        }
+        #population img {
+          border-radius: 0;
+          width: 100%;
+          object-fit:cover;
+        }
+      } */
       @media (max-width: 800px) {
         h1 {
           font-size: 5rem;
@@ -238,16 +247,13 @@
         .divider-icon {
           visibility: visible;
         }
-        #population img,
+
         #nature img,
         #visit img {
           padding: 1.5rem;
         }
-        #population img {
-          margin: 3rem 0 -0.75rem;
-        }
+
         #nature p,
-        #population p,
         #visit p {
           margin: 1.5rem;
         }
@@ -349,8 +355,8 @@
     <!-- <div class="divider-icon">
       <i class="fa-solid fa-mountain"></i>
     </div> -->
-    <div class="container">
-      <section>
+    
+      <!-- <section>
         <div class="row" id="population">
           <div class="col-md-6 d-md-inline-flex">
             <img
@@ -361,15 +367,15 @@
           </div>
           <div class="col-md-6 d-md-inline-flex">
             <p><strong>Population is 372,520</strong>*</p>
-            <!-- <div>*as of 2021</div> -->
+            <div>*as of 2021</div> -->
             <!--add a hover element with population count and add another photo with fact?-->
-          </div>
+          <!-- </div>
         </div>
-      </section>
+      </section> -->
       <div class="arrow">
         <a href="#"><i class="fa-solid fa-arrow-up"></i> </a>
       </div>
-    </div>
+    
     <footer>
       <div>
         <a href="https://www.linkedin.com/in/doyonlaura" target="_blank"
