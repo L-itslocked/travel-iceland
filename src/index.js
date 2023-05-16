@@ -8,7 +8,7 @@ function displayTemperature(response) {
   //   document.querySelector("#icon").innerHTML = `${icon}`;
 }
 
-function getTemperature(coordinates) {
+function getTemperature() {
   let key = "acf4f9701d8363a6ed361252f2b74e65";
   let city = "Reykjavik";
   let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
